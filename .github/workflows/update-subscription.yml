@@ -2,7 +2,8 @@ name: Update Subscription
 
 on:
   schedule:
-    - cron: '30 16 * * *'
+    - cron: '33 16 * * *'
+    - cron: '33 4 * * *'
   workflow_dispatch:
 
 permissions:
