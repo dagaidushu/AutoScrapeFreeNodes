@@ -5,7 +5,7 @@ const INLINE_CONFIG = {
   "settings": {
     "updateInterval": 720,
     "maxArticlesPerSite": 10,
-    "lastUpdated": "2026-07-13T05:10:04.046Z",
+    "lastUpdated": "2026-07-13T05:10:20.640Z",
     "localFreeNodesCount": 0
   }
 };
@@ -13,7 +13,7 @@ const INLINE_SUBSCRIPTIONS = {
   "example": {
     "url": "https://example.com",
     "siteName": "示例站点",
-    "scrapedAt": "2026-07-13T05:10:04.156Z",
+    "scrapedAt": "2026-07-13T05:10:20.744Z",
     "subscriptionCount": 2,
     "subscriptions": [
       {
@@ -37,13 +37,13 @@ const INLINE_SITES = {
   "example": {
     "url": "https://example.com",
     "siteName": "示例站点",
-    "scrapedAt": "2026-07-13T05:10:04.156Z",
+    "scrapedAt": "2026-07-13T05:10:20.744Z",
     "totalSubscriptions": 2,
     "articles": [
       {
         "title": "示例文章",
         "url": "https://example.com/article1",
-        "publishedAt": "2026-07-13T05:10:04.156Z",
+        "publishedAt": "2026-07-13T05:10:20.744Z",
         "subscriptions": [
           {
             "type": "Clash",
