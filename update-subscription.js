@@ -289,18 +289,6 @@ function toSubscription(nodes) {
   return `${Buffer.from(nodes.join('\n'), 'utf8').toString('base64')}\n`;
 }
 
-function partitionNodes(nodes, batchCount) {
-  const batches = Array.from({ length: batchCount }, () => []);
-  nodes.forEach((node, index) => batches[index % batchCount].push(node));
-  return batches;
-}
-
-async function writeBatchSubscriptions(outputDir, batches) {
-  await Promise.all(batches.map((batch, index) =>
-    fs.writeFile(path.join(outputDir, `subscription-${index + 1}.txt`), toSubscription(batch), 'utf8')
-  ));
-}
-
 async function writeProtocolSubscriptions(outputDir, nodes) {
   const grouped = new Map();
   for (const node of nodes) {
@@ -337,18 +325,42 @@ async function run() {
   )).slice(0, maxSources);
   const exactNodes = new Set();
   const sourceResults = [];
+  const sourceNodeGroups = new Array(sources.length).fill(null);
 
-  for (const source of sources) {
+  for (const [sourceIndex, source] of sources.entries()) {
+    const outputFile = `source-${sourceIndex + 1}.txt`;
     try {
       const fetchedNodes = await fetchNodes(source, maxBytes);
       fetchedNodes.forEach(node => exactNodes.add(node));
-      sourceResults.push({ url: source, status: 'ok', extractedNodes: fetchedNodes.length });
+      sourceNodeGroups[sourceIndex] = [...new Set(fetchedNodes)];
+      sourceResults.push({
+        url: source,
+        outputFile,
+        status: 'ok',
+        extractedNodes: fetchedNodes.length,
+        uniqueNodes: sourceNodeGroups[sourceIndex].length
+      });
       console.log(`${source}: ${fetchedNodes.length} nodes`);
     } catch (error) {
-      sourceResults.push({ url: source, status: 'failed', error: error.message });
+      sourceResults.push({ url: source, outputFile, status: 'failed', error: error.message });
       console.warn(`${source}: ${error.message}`);
     }
   }
+
+  await fs.ensureDir(outputDir);
+  for (const [sourceIndex, sourceNodes] of sourceNodeGroups.entries()) {
+    const sourceOutputPath = path.join(outputDir, `source-${sourceIndex + 1}.txt`);
+    if (sourceNodes) {
+      await fs.writeFile(sourceOutputPath, toSubscription(sourceNodes), 'utf8');
+    } else if (!(await fs.pathExists(sourceOutputPath))) {
+      await fs.writeFile(sourceOutputPath, toSubscription([]), 'utf8');
+    }
+  }
+  await fs.writeJson(path.join(outputDir, 'source-manifest.json'), {
+    updatedAt: new Date().toISOString(),
+    sources: sourceResults
+  }, { spaces: 2 });
+  await Promise.all([1, 2, 3].map(index => fs.remove(path.join(outputDir, `subscription-${index}.txt`))));
 
   const successfulSourceCount = sourceResults.filter(result => result.status === 'ok').length;
   const minimumSuccessfulSources = Math.max(1, Math.ceil(sources.length * 0.6));
@@ -360,9 +372,10 @@ async function run() {
       successfulSourceCount,
       minimumSuccessfulSources,
       sourceResults,
-      message: 'Too few sources succeeded. All previous subscription files were kept unchanged.'
+      message: 'Too few sources succeeded. Per-source files were updated independently; aggregate files were kept unchanged.'
     }, { spaces: 2 });
-    throw new Error(`Only ${successfulSourceCount}/${sources.length} sources succeeded; at least ${minimumSuccessfulSources} are required. Previous outputs were kept.`);
+    console.warn(`Only ${successfulSourceCount}/${sources.length} sources succeeded; aggregate files require ${minimumSuccessfulSources}.`);
+    return;
   }
 
   const semanticNodes = new Map();
@@ -373,7 +386,6 @@ async function run() {
   const deduplicatedNodes = [...semanticNodes.values()];
   const health = await filterReachableNodes(deduplicatedNodes, connectivityCheck);
   const nodes = health.nodes;
-  const batches = partitionNodes(nodes, 3);
   const protocolCounts = Object.fromEntries([...SUPPORTED_PROTOCOLS].map(protocol => [protocol, 0]));
   for (const node of nodes) protocolCounts[getProtocol(node)] += 1;
 
@@ -397,10 +409,6 @@ async function run() {
       timeoutMs: connectivityCheck.timeoutMs,
       concurrency: connectivityCheck.concurrency
     },
-    batchCounts: batches.map((batch, index) => ({
-      file: `subscription-${index + 1}.txt`,
-      nodeCount: batch.length
-    })),
     protocolCounts,
     failedSources: sourceResults.filter(result => result.status === 'failed').map(({ url, error }) => ({ url, error }))
   };
@@ -430,9 +438,8 @@ async function run() {
   const historyLimit = Math.max(1, Number(settings.historyLimit) || 30);
   await fs.writeJson(historyPath, history.slice(-historyLimit), { spaces: 2 });
   await fs.writeFile(path.join(outputDir, 'subscription.txt'), toSubscription(nodes), 'utf8');
-  await writeBatchSubscriptions(outputDir, batches);
   await writeProtocolSubscriptions(outputDir, nodes);
-  console.log(`Wrote ${nodes.length} semantically unique nodes in batches of ${batches.map(batch => batch.length).join(', ')}`);
+  console.log(`Wrote ${nodes.length} semantically unique aggregate nodes and ${successfulSourceCount} per-source subscriptions`);
 }
 
 run().catch(error => {
