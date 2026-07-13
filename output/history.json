@@ -138,5 +138,33 @@
       "naive": 0,
       "shadowtls": 0
     }
+  },
+  {
+    "updatedAt": "2026-07-13T10:31:54.849Z",
+    "sourceCount": 6,
+    "nodeCount": 1172,
+    "unreachableNodesRemoved": 0,
+    "failedSourceCount": 1,
+    "protocolCounts": {
+      "vless": 883,
+      "vmess": 98,
+      "trojan": 44,
+      "ss": 127,
+      "ssr": 0,
+      "hysteria": 0,
+      "hysteria2": 17,
+      "hy2": 0,
+      "tuic": 0,
+      "socks": 3,
+      "socks4": 0,
+      "socks5": 0,
+      "http": 0,
+      "https": 0,
+      "wireguard": 0,
+      "wg": 0,
+      "anytls": 0,
+      "naive": 0,
+      "shadowtls": 0
+    }
   }
 ]
