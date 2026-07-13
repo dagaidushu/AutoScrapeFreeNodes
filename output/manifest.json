@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T10:02:35.973Z",
+  "updatedAt": "2026-07-13T10:17:14.765Z",
   "sourceCount": 6,
   "sourceResults": [
     {
@@ -48,6 +48,20 @@
     "timeoutMs": 3000,
     "concurrency": 32
   },
+  "batchCounts": [
+    {
+      "file": "subscription-1.txt",
+      "nodeCount": 391
+    },
+    {
+      "file": "subscription-2.txt",
+      "nodeCount": 391
+    },
+    {
+      "file": "subscription-3.txt",
+      "nodeCount": 390
+    }
+  ],
   "protocolCounts": {
     "vless": 883,
     "vmess": 98,
