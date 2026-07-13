@@ -20,8 +20,13 @@
   },
   "subscriptions": [],
   "sourceSubscriptions": [],
-  "sourceTemplates": [],
-  "sourceManifestUrls": [
-    "https://asfn.awafuns.cn/api/subscriptions.json"
-  ]
+  "sourceTemplates": [
+    "https://node.freeclashnode.com/uploads/{YYYY}/{MM}/0-{YYYYMMDD}.txt",
+    "https://node.freeclashnode.com/uploads/{YYYY}/{MM}/1-{YYYYMMDD}.txt",
+    "https://node.freeclashnode.com/uploads/{YYYY}/{MM}/2-{YYYYMMDD}.txt",
+    "https://node.freeclashnode.com/uploads/{YYYY}/{MM}/3-{YYYYMMDD}.txt",
+    "https://node.freeclashnode.com/uploads/{YYYY}/{MM}/4-{YYYYMMDD}.txt",
+    "https://www.airportnode.com/stair/{YYYYMMDD}-v2ray.txt"
+  ],
+  "sourceManifestUrls": []
 }

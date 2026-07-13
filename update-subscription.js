@@ -172,11 +172,36 @@ async function getSubscriptionUrls(configuredSources, sourceTemplates, sourceMan
 }
 
 async function fetchNodes(url, maxBytes) {
-  const response = await getWithRetry(url, {
-    timeout: 20000, responseType: 'text', maxContentLength: maxBytes, maxBodyLength: maxBytes,
-    headers: { 'User-Agent': 'v2rayN/7.12.5' }, validateStatus: status => status >= 200 && status < 300
-  });
-  return extractNodes(response.data);
+  let lastError;
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    try {
+      const response = await fetch(url, {
+        signal: controller.signal,
+        headers: {
+          'User-Agent': 'Mozilla/5.0',
+          Accept: 'text/plain,*/*'
+        }
+      });
+      if (!response.ok) throw new Error(`Request failed with status code ${response.status}`);
+      const declaredLength = Number(response.headers.get('content-length'));
+      if (Number.isFinite(declaredLength) && declaredLength > maxBytes) {
+        throw new Error(`Subscription exceeds ${maxBytes} bytes`);
+      }
+      const content = new Uint8Array(await response.arrayBuffer());
+      if (content.byteLength > maxBytes) throw new Error(`Subscription exceeds ${maxBytes} bytes`);
+      const nodes = extractNodes(new TextDecoder().decode(content));
+      if (nodes.length === 0) throw new Error('Response contains no supported node URIs');
+      return nodes;
+    } catch (error) {
+      lastError = error?.name === 'AbortError' ? new Error('Request timed out after 20000ms') : error;
+      if (attempt === 1) console.warn(`${url}: first request failed, retrying once`);
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+  throw lastError;
 }
 
 async function getWithRetry(url, options) {
