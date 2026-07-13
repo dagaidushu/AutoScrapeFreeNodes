@@ -694,48 +694,35 @@ const generateMockData = (siteName) => {
 
 // 抓取一个网站及其所有文章
 const scrapeSite = async (url) => {
+  const siteData = {
+    url,
+    siteName: url.includes('://') ? new URL(url).hostname : 'unknown',
+    scrapedAt: new Date().toISOString(),
+    articles: []
+  };
+
   try {
-    console.log(`处理网站 ${url}，直接使用模拟数据`);
-    
-    // 直接使用模拟数据进行测试
-    const siteData = {
-      url: url,
-      siteName: url.includes('://') ? new URL(url).hostname : 'unknown',
-      scrapedAt: new Date().toISOString(),
-      articles: []
-    };
-    
-    const mockData = generateMockData(url);
-    if (mockData) {
-      siteData.articles.push(mockData);
+    console.log(`处理网站 ${url}，抓取真实订阅链接`);
+    let articleUrls = await scrapeArticleLinks(url);
+    if (articleUrls.length === 0) {
+      articleUrls = await tryAlternativeUrls(url);
     }
-    
+
+    const uniqueArticleUrls = [...new Set(articleUrls)].slice(0, loadConfig().settings.maxArticlesPerSite || 20);
+    for (const articleUrl of uniqueArticleUrls) {
+      const article = await scrapeArticle(articleUrl, siteData.siteName);
+      if (article.subscriptionCount > 0) {
+        siteData.articles.push(article);
+      }
+    }
+
     siteData.totalSubscriptions = siteData.articles.reduce((sum, article) => sum + article.subscriptionCount, 0);
-    
-    console.log(`网站 ${url} 总共模拟了 ${siteData.totalSubscriptions} 个订阅链接`);
-    
+    console.log(`网站 ${url} 共抓取到 ${siteData.totalSubscriptions} 个订阅链接`);
     return siteData;
-    
   } catch (error) {
     console.error(`处理网站 ${url} 失败:`, error.message);
-    
-    // 出错时也使用模拟数据
-    console.log(`网站 ${url} 处理出错，使用模拟数据进行测试`);
-    const siteData = {
-      url: url,
-      siteName: url.includes('://') ? new URL(url).hostname : 'unknown',
-      scrapedAt: new Date().toISOString(),
-      error: error.message,
-      articles: []
-    };
-    
-    const mockData = generateMockData(url);
-    if (mockData) {
-      siteData.articles.push(mockData);
-    }
-    
-    siteData.totalSubscriptions = siteData.articles.reduce((sum, article) => sum + article.subscriptionCount, 0);
-    
+    siteData.error = error.message;
+    siteData.totalSubscriptions = 0;
     return siteData;
   }
 };

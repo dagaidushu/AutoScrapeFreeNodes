@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "build": "node generate-static.js",
+    "update": "node update-subscription.js",
     "test": "node test-static.js",
     "dev": "nodemon index.js"
   },
