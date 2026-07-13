@@ -72,9 +72,14 @@ async function getManifestSubscriptionUrls(manifestUrls) {
       });
       for (const source of Object.values(response.data || {})) {
         for (const subscription of source.subscriptions || []) {
-          if (typeof subscription.url === 'string' && /^https?:\/\//i.test(subscription.url)) {
-            const subscriptionUrl = subscription.url.trim();
+          if (typeof subscription.url !== 'string' || !/^https?:\/\//i.test(subscription.url)) {
+            continue;
+          }
+          const subscriptionUrl = subscription.url.trim();
+          const type = String(subscription.type || '').toLowerCase();
+          if (type === 'v2ray') {
             urls.add(subscriptionUrl);
+          } else if (type === 'clash') {
             const genericTextVariant = getGenericTextVariant(subscriptionUrl);
             if (genericTextVariant) urls.add(genericTextVariant);
           }
@@ -88,23 +93,11 @@ async function getManifestSubscriptionUrls(manifestUrls) {
   return urls;
 }
 
-async function getSubscriptionUrls(dataDir, configuredSources, sourceTemplates, sourceManifestUrls) {
+async function getSubscriptionUrls(configuredSources, sourceTemplates, sourceManifestUrls) {
   const urls = new Set([
     ...configuredSources.filter(value => typeof value === 'string'),
     ...expandSourceTemplates(sourceTemplates)
   ]);
-  if (fs.existsSync(dataDir)) {
-    for (const file of fs.readdirSync(dataDir).filter(name => name.endsWith('.json'))) {
-      const site = fs.readJsonSync(path.join(dataDir, file));
-      for (const article of site.articles || []) {
-        for (const subscription of article.subscriptions || []) {
-          if (typeof subscription.url === 'string' && /^https?:\/\//i.test(subscription.url)) {
-            urls.add(subscription.url.trim());
-          }
-        }
-      }
-    }
-  }
   for (const url of await getManifestSubscriptionUrls(sourceManifestUrls)) urls.add(url);
   return [...urls];
 }
@@ -127,7 +120,6 @@ async function run() {
 
   await scraper.scrapeAllSites();
   const sources = (await getSubscriptionUrls(
-    dataDir,
     config.sourceSubscriptions || [],
     config.sourceTemplates || [],
     config.sourceManifestUrls || []

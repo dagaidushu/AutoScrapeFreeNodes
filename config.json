@@ -7,7 +7,7 @@
     "port": 3001,
     "dataDir": "data",
     "outputDir": "output",
-    "maxSubscriptionSources": 50,
+    "maxSubscriptionSources": 6,
     "maxSubscriptionBytes": 2097152,
     "lastUpdated": "2026-07-13T00:00:00.000Z",
     "localFreeNodesCount": 0
