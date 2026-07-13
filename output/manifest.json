@@ -1,6 +1,35 @@
 {
-  "updatedAt": "2026-07-13T05:14:52.316Z",
-  "sourceCount": 2,
-  "nodeCount": 463,
-  "failedSources": []
+  "updatedAt": "2026-07-13T05:33:34.485Z",
+  "sourceCount": 18,
+  "nodeCount": 1441,
+  "failedSources": [
+    {
+      "url": "https://www.airportnode.com/stair/20260712-clash.yaml",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "url": "https://www.airportnode.com/stair/20260712-v2ray.txt",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "url": "https://sub.0664.net/ss/sub",
+      "error": "Request failed with status code 403"
+    },
+    {
+      "url": "https://sub.0664.net/sip002/sub",
+      "error": "Request failed with status code 403"
+    },
+    {
+      "url": "https://sub.0664.net/ssr/sub",
+      "error": "Request failed with status code 403"
+    },
+    {
+      "url": "https://sub.0664.net/vmess/sub",
+      "error": "Request failed with status code 403"
+    },
+    {
+      "url": "https://sub.0664.net/trojan/sub",
+      "error": "Request failed with status code 403"
+    }
+  ]
 }
