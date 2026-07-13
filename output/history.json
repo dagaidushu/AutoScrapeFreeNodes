@@ -1,0 +1,30 @@
+[
+  {
+    "updatedAt": "2026-07-13T09:07:50.874Z",
+    "sourceCount": 6,
+    "nodeCount": 567,
+    "unreachableNodesRemoved": 556,
+    "failedSourceCount": 1,
+    "protocolCounts": {
+      "vless": 411,
+      "vmess": 39,
+      "trojan": 36,
+      "ss": 70,
+      "ssr": 0,
+      "hysteria": 0,
+      "hysteria2": 7,
+      "hy2": 0,
+      "tuic": 0,
+      "socks": 4,
+      "socks4": 0,
+      "socks5": 0,
+      "http": 0,
+      "https": 0,
+      "wireguard": 0,
+      "wg": 0,
+      "anytls": 0,
+      "naive": 0,
+      "shadowtls": 0
+    }
+  }
+]
