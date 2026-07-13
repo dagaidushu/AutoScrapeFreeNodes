@@ -9,6 +9,12 @@
     "outputDir": "output",
     "maxSubscriptionSources": 6,
     "maxSubscriptionBytes": 2097152,
+    "historyLimit": 30,
+    "connectivityCheck": {
+      "enabled": true,
+      "timeoutMs": 3000,
+      "concurrency": 32
+    },
     "lastUpdated": "2026-07-13T00:00:00.000Z",
     "localFreeNodesCount": 0
   },
