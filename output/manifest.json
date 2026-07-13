@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T09:07:50.874Z",
+  "updatedAt": "2026-07-13T09:19:54.875Z",
   "sourceCount": 6,
   "sourceResults": [
     {
@@ -38,24 +38,24 @@
     "exactUnique": 1441,
     "semanticUnique": 1123,
     "semanticDuplicatesRemoved": 318,
-    "reachableNodes": 567,
-    "unreachableNodesRemoved": 556
+    "reachableNodes": 1123,
+    "unreachableNodesRemoved": 0
   },
   "connectivityCheck": {
-    "enabled": true,
-    "checkedEndpoints": 876,
+    "enabled": false,
+    "checkedEndpoints": 0,
     "unparseableNodesKept": 0,
     "timeoutMs": 3000,
     "concurrency": 32
   },
   "protocolCounts": {
-    "vless": 411,
-    "vmess": 39,
-    "trojan": 36,
-    "ss": 70,
+    "vless": 835,
+    "vmess": 90,
+    "trojan": 53,
+    "ss": 121,
     "ssr": 0,
     "hysteria": 0,
-    "hysteria2": 7,
+    "hysteria2": 20,
     "hy2": 0,
     "tuic": 0,
     "socks": 4,
