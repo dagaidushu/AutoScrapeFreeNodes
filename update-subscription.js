@@ -52,23 +52,60 @@ function expandSourceTemplates(templates) {
   );
 }
 
-function getSubscriptionUrls(dataDir, configuredSources, sourceTemplates) {
+function getGenericTextVariant(url) {
+  const parsed = new URL(url);
+  if (parsed.hostname !== 'node.freeclashnode.com' || !/\/\d+-\d{8}\.yaml$/i.test(parsed.pathname)) {
+    return null;
+  }
+  parsed.pathname = parsed.pathname.replace(/\.yaml$/i, '.txt');
+  return parsed.toString();
+}
+
+async function getManifestSubscriptionUrls(manifestUrls) {
+  const urls = new Set();
+  for (const manifestUrl of manifestUrls.filter(value => typeof value === 'string')) {
+    try {
+      const response = await axios.get(manifestUrl, {
+        timeout: 20000,
+        responseType: 'json',
+        headers: { 'User-Agent': 'Mozilla/5.0' }
+      });
+      for (const source of Object.values(response.data || {})) {
+        for (const subscription of source.subscriptions || []) {
+          if (typeof subscription.url === 'string' && /^https?:\/\//i.test(subscription.url)) {
+            const subscriptionUrl = subscription.url.trim();
+            urls.add(subscriptionUrl);
+            const genericTextVariant = getGenericTextVariant(subscriptionUrl);
+            if (genericTextVariant) urls.add(genericTextVariant);
+          }
+        }
+      }
+      console.log(`${manifestUrl}: found ${urls.size} subscription sources`);
+    } catch (error) {
+      console.warn(`${manifestUrl}: ${error.message}`);
+    }
+  }
+  return urls;
+}
+
+async function getSubscriptionUrls(dataDir, configuredSources, sourceTemplates, sourceManifestUrls) {
   const urls = new Set([
     ...configuredSources.filter(value => typeof value === 'string'),
     ...expandSourceTemplates(sourceTemplates)
   ]);
-  if (!fs.existsSync(dataDir)) return [...urls];
-
-  for (const file of fs.readdirSync(dataDir).filter(name => name.endsWith('.json'))) {
-    const site = fs.readJsonSync(path.join(dataDir, file));
-    for (const article of site.articles || []) {
-      for (const subscription of article.subscriptions || []) {
-        if (typeof subscription.url === 'string' && /^https?:\/\//i.test(subscription.url)) {
-          urls.add(subscription.url.trim());
+  if (fs.existsSync(dataDir)) {
+    for (const file of fs.readdirSync(dataDir).filter(name => name.endsWith('.json'))) {
+      const site = fs.readJsonSync(path.join(dataDir, file));
+      for (const article of site.articles || []) {
+        for (const subscription of article.subscriptions || []) {
+          if (typeof subscription.url === 'string' && /^https?:\/\//i.test(subscription.url)) {
+            urls.add(subscription.url.trim());
+          }
         }
       }
     }
   }
+  for (const url of await getManifestSubscriptionUrls(sourceManifestUrls)) urls.add(url);
   return [...urls];
 }
 
@@ -89,7 +126,12 @@ async function run() {
   const maxBytes = Number(settings.maxSubscriptionBytes) || 2 * 1024 * 1024;
 
   await scraper.scrapeAllSites();
-  const sources = getSubscriptionUrls(dataDir, config.sourceSubscriptions || [], config.sourceTemplates || []).slice(0, maxSources);
+  const sources = (await getSubscriptionUrls(
+    dataDir,
+    config.sourceSubscriptions || [],
+    config.sourceTemplates || [],
+    config.sourceManifestUrls || []
+  )).slice(0, maxSources);
   const nodes = new Set();
   const failures = [];
 

@@ -7,15 +7,15 @@
     "port": 3001,
     "dataDir": "data",
     "outputDir": "output",
-    "maxSubscriptionSources": 30,
+    "maxSubscriptionSources": 50,
     "maxSubscriptionBytes": 2097152,
     "lastUpdated": "2026-07-13T00:00:00.000Z",
     "localFreeNodesCount": 0
   },
   "subscriptions": [],
   "sourceSubscriptions": [],
-  "sourceTemplates": [
-    "https://node.freeclashnode.com/uploads/{YYYY}/{MM}/0-{YYYYMMDD}.txt",
-    "https://node.freeclashnode.com/uploads/{YYYY}/{MM}/1-{YYYYMMDD}.txt"
+  "sourceTemplates": [],
+  "sourceManifestUrls": [
+    "https://asfn.awafuns.cn/api/subscriptions.json"
   ]
 }
