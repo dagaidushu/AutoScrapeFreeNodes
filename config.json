@@ -11,7 +11,7 @@
     "maxSubscriptionBytes": 2097152,
     "historyLimit": 30,
     "connectivityCheck": {
-      "enabled": true,
+      "enabled": false,
       "timeoutMs": 3000,
       "concurrency": 32
     },
