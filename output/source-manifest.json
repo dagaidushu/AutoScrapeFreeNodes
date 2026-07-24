@@ -1,23 +1,26 @@
 {
-  "updatedAt": "2026-07-23T17:56:56.960Z",
+  "updatedAt": "2026-07-24T07:13:13.536Z",
   "sources": [
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/0-20260724.txt",
       "outputFile": "source-1.txt",
-      "status": "failed",
-      "error": "Response contains no supported node URIs"
+      "status": "ok",
+      "extractedNodes": 297,
+      "uniqueNodes": 245
     },
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/1-20260724.txt",
       "outputFile": "source-2.txt",
-      "status": "failed",
-      "error": "Response contains no supported node URIs"
+      "status": "ok",
+      "extractedNodes": 171,
+      "uniqueNodes": 155
     },
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/2-20260724.txt",
       "outputFile": "source-3.txt",
-      "status": "failed",
-      "error": "Response contains no supported node URIs"
+      "status": "ok",
+      "extractedNodes": 2371,
+      "uniqueNodes": 2371
     },
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/3-20260724.txt",
@@ -29,8 +32,9 @@
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/4-20260724.txt",
       "outputFile": "source-5.txt",
-      "status": "failed",
-      "error": "Response contains no supported node URIs"
+      "status": "ok",
+      "extractedNodes": 1019,
+      "uniqueNodes": 1019
     },
     {
       "url": "https://www.airportnode.com/stair/20260724-v2ray.txt",
