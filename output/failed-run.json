@@ -1,6 +1,9 @@
 {
-  "updatedAt": "2026-07-26T17:38:02.014Z",
-  "sources": [
+  "updatedAt": "2026-07-26T17:38:02.017Z",
+  "sourceCount": 6,
+  "successfulSourceCount": 0,
+  "minimumSuccessfulSources": 4,
+  "sourceResults": [
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/0-20260727.txt",
       "outputFile": "source-1.txt",
@@ -37,5 +40,6 @@
       "status": "failed",
       "error": "Request failed with status code 404"
     }
-  ]
+  ],
+  "message": "Too few sources succeeded. Per-source files were updated independently; aggregate files were kept unchanged."
 }
