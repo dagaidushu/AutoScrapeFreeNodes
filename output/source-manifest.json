@@ -1,43 +1,43 @@
 {
-  "updatedAt": "2026-07-27T08:04:31.520Z",
+  "updatedAt": "2026-07-27T18:09:05.475Z",
   "sources": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/0-20260727.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/07/0-20260728.txt",
       "outputFile": "source-1.txt",
       "status": "ok",
-      "extractedNodes": 300,
-      "uniqueNodes": 248
+      "extractedNodes": 305,
+      "uniqueNodes": 253
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/1-20260727.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/07/1-20260728.txt",
       "outputFile": "source-2.txt",
       "status": "ok",
-      "extractedNodes": 236,
-      "uniqueNodes": 226
+      "extractedNodes": 197,
+      "uniqueNodes": 197
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/2-20260727.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/07/2-20260728.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 1080,
-      "uniqueNodes": 1080
+      "extractedNodes": 2765,
+      "uniqueNodes": 2765
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/3-20260727.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/07/3-20260728.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
       "extractedNodes": 27,
       "uniqueNodes": 27
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/4-20260727.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/07/4-20260728.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
-      "extractedNodes": 1048,
-      "uniqueNodes": 1048
+      "extractedNodes": 1049,
+      "uniqueNodes": 1049
     },
     {
-      "url": "https://www.airportnode.com/stair/20260727-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20260728-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "Request failed with status code 404"
