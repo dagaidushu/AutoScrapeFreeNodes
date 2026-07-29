@@ -1,43 +1,42 @@
 {
-  "updatedAt": "2026-07-29T07:24:03.733Z",
+  "updatedAt": "2026-07-29T17:51:33.113Z",
   "sources": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/0-20260729.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/07/0-20260730.txt",
       "outputFile": "source-1.txt",
-      "status": "ok",
-      "extractedNodes": 301,
-      "uniqueNodes": 250
+      "status": "failed",
+      "error": "Response contains no supported node URIs"
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/1-20260729.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/07/1-20260730.txt",
       "outputFile": "source-2.txt",
       "status": "ok",
-      "extractedNodes": 212,
-      "uniqueNodes": 212
+      "extractedNodes": 216,
+      "uniqueNodes": 216
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/2-20260729.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/07/2-20260730.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 243,
-      "uniqueNodes": 235
+      "extractedNodes": 2846,
+      "uniqueNodes": 2846
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/3-20260729.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/07/3-20260730.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
       "extractedNodes": 27,
       "uniqueNodes": 27
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/4-20260729.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/07/4-20260730.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
-      "extractedNodes": 1059,
-      "uniqueNodes": 1059
+      "extractedNodes": 1082,
+      "uniqueNodes": 1082
     },
     {
-      "url": "https://www.airportnode.com/stair/20260729-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20260730-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "Request failed with status code 404"
