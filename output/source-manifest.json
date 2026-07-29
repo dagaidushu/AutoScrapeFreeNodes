@@ -1,17 +1,19 @@
 {
-  "updatedAt": "2026-07-28T17:59:37.550Z",
+  "updatedAt": "2026-07-29T07:24:03.733Z",
   "sources": [
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/0-20260729.txt",
       "outputFile": "source-1.txt",
-      "status": "failed",
-      "error": "Response contains no supported node URIs"
+      "status": "ok",
+      "extractedNodes": 301,
+      "uniqueNodes": 250
     },
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/1-20260729.txt",
       "outputFile": "source-2.txt",
-      "status": "failed",
-      "error": "Response contains no supported node URIs"
+      "status": "ok",
+      "extractedNodes": 212,
+      "uniqueNodes": 212
     },
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/2-20260729.txt",
