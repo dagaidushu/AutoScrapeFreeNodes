@@ -1,11 +1,12 @@
 {
-  "updatedAt": "2026-07-29T17:51:33.113Z",
+  "updatedAt": "2026-07-30T07:17:01.917Z",
   "sources": [
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/0-20260730.txt",
       "outputFile": "source-1.txt",
-      "status": "failed",
-      "error": "Response contains no supported node URIs"
+      "status": "ok",
+      "extractedNodes": 315,
+      "uniqueNodes": 261
     },
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/1-20260730.txt",

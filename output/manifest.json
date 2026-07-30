@@ -1,12 +1,13 @@
 {
-  "updatedAt": "2026-07-29T17:51:33.191Z",
+  "updatedAt": "2026-07-30T07:17:01.990Z",
   "sourceCount": 6,
   "sourceResults": [
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/0-20260730.txt",
       "outputFile": "source-1.txt",
-      "status": "failed",
-      "error": "Response contains no supported node URIs"
+      "status": "ok",
+      "extractedNodes": 315,
+      "uniqueNodes": 261
     },
     {
       "url": "https://node.freeclashnode.com/uploads/2026/07/1-20260730.txt",
@@ -44,11 +45,11 @@
     }
   ],
   "counts": {
-    "extracted": 4171,
-    "exactUnique": 4171,
-    "semanticUnique": 3982,
-    "semanticDuplicatesRemoved": 189,
-    "reachableNodes": 3982,
+    "extracted": 4486,
+    "exactUnique": 4432,
+    "semanticUnique": 4205,
+    "semanticDuplicatesRemoved": 227,
+    "reachableNodes": 4205,
     "unreachableNodesRemoved": 0
   },
   "connectivityCheck": {
@@ -59,13 +60,13 @@
     "concurrency": 32
   },
   "protocolCounts": {
-    "vless": 2972,
-    "vmess": 267,
-    "trojan": 264,
-    "ss": 356,
+    "vless": 3147,
+    "vmess": 279,
+    "trojan": 287,
+    "ss": 364,
     "ssr": 0,
     "hysteria": 6,
-    "hysteria2": 96,
+    "hysteria2": 101,
     "hy2": 0,
     "tuic": 1,
     "socks": 11,
@@ -80,10 +81,6 @@
     "shadowtls": 0
   },
   "failedSources": [
-    {
-      "url": "https://node.freeclashnode.com/uploads/2026/07/0-20260730.txt",
-      "error": "Response contains no supported node URIs"
-    },
     {
       "url": "https://www.airportnode.com/stair/20260730-v2ray.txt",
       "error": "Request failed with status code 404"
