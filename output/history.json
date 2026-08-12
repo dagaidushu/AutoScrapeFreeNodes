@@ -1,33 +1,5 @@
 [
   {
-    "updatedAt": "2026-07-21T07:14:59.704Z",
-    "sourceCount": 6,
-    "nodeCount": 4102,
-    "unreachableNodesRemoved": 0,
-    "failedSourceCount": 1,
-    "protocolCounts": {
-      "vless": 2893,
-      "vmess": 226,
-      "trojan": 603,
-      "ss": 286,
-      "ssr": 0,
-      "hysteria": 0,
-      "hysteria2": 80,
-      "hy2": 0,
-      "tuic": 2,
-      "socks": 11,
-      "socks4": 0,
-      "socks5": 0,
-      "http": 0,
-      "https": 0,
-      "wireguard": 0,
-      "wg": 0,
-      "anytls": 1,
-      "naive": 0,
-      "shadowtls": 0
-    }
-  },
-  {
     "updatedAt": "2026-07-21T17:55:31.157Z",
     "sourceCount": 6,
     "nodeCount": 3948,
@@ -835,6 +807,34 @@
       "wireguard": 0,
       "wg": 0,
       "anytls": 4,
+      "naive": 0,
+      "shadowtls": 0
+    }
+  },
+  {
+    "updatedAt": "2026-08-12T06:01:54.733Z",
+    "sourceCount": 6,
+    "nodeCount": 4111,
+    "unreachableNodesRemoved": 0,
+    "failedSourceCount": 1,
+    "protocolCounts": {
+      "vless": 2749,
+      "vmess": 357,
+      "trojan": 459,
+      "ss": 386,
+      "ssr": 0,
+      "hysteria": 3,
+      "hysteria2": 120,
+      "hy2": 0,
+      "tuic": 3,
+      "socks": 28,
+      "socks4": 0,
+      "socks5": 0,
+      "http": 0,
+      "https": 0,
+      "wireguard": 0,
+      "wg": 0,
+      "anytls": 6,
       "naive": 0,
       "shadowtls": 0
     }
