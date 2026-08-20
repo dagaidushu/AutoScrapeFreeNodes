@@ -1,55 +1,55 @@
 {
-  "updatedAt": "2026-08-19T05:05:21.704Z",
+  "updatedAt": "2026-08-20T05:06:13.445Z",
   "sourceCount": 6,
   "sourceResults": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/08/0-20260819.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/08/0-20260820.txt",
       "outputFile": "source-1.txt",
       "status": "ok",
-      "extractedNodes": 241,
-      "uniqueNodes": 213
+      "extractedNodes": 235,
+      "uniqueNodes": 208
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/08/1-20260819.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/08/1-20260820.txt",
       "outputFile": "source-2.txt",
       "status": "ok",
-      "extractedNodes": 276,
-      "uniqueNodes": 276
+      "extractedNodes": 271,
+      "uniqueNodes": 271
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/08/2-20260819.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/08/2-20260820.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 4046,
-      "uniqueNodes": 4046
+      "extractedNodes": 5244,
+      "uniqueNodes": 5244
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/08/3-20260819.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/08/3-20260820.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
       "extractedNodes": 14,
       "uniqueNodes": 14
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/08/4-20260819.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/08/4-20260820.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
-      "extractedNodes": 1520,
-      "uniqueNodes": 1520
+      "extractedNodes": 1572,
+      "uniqueNodes": 1572
     },
     {
-      "url": "https://www.airportnode.com/stair/20260819-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20260820-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "Request failed with status code 404"
     }
   ],
   "counts": {
-    "extracted": 6097,
-    "exactUnique": 6069,
-    "semanticUnique": 5716,
-    "semanticDuplicatesRemoved": 353,
-    "reachableNodes": 5716,
+    "extracted": 7336,
+    "exactUnique": 7309,
+    "semanticUnique": 6948,
+    "semanticDuplicatesRemoved": 361,
+    "reachableNodes": 6948,
     "unreachableNodesRemoved": 0
   },
   "connectivityCheck": {
@@ -60,29 +60,29 @@
     "concurrency": 32
   },
   "protocolCounts": {
-    "vless": 2748,
-    "vmess": 465,
-    "trojan": 1569,
-    "ss": 489,
-    "ssr": 44,
-    "hysteria": 4,
-    "hysteria2": 365,
+    "vless": 3783,
+    "vmess": 435,
+    "trojan": 1810,
+    "ss": 539,
+    "ssr": 22,
+    "hysteria": 3,
+    "hysteria2": 322,
     "hy2": 0,
-    "tuic": 1,
-    "socks": 15,
+    "tuic": 2,
+    "socks": 18,
     "socks4": 0,
     "socks5": 0,
     "http": 0,
     "https": 0,
     "wireguard": 0,
     "wg": 0,
-    "anytls": 16,
+    "anytls": 14,
     "naive": 0,
     "shadowtls": 0
   },
   "failedSources": [
     {
-      "url": "https://www.airportnode.com/stair/20260819-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20260820-v2ray.txt",
       "error": "Request failed with status code 404"
     }
   ]
