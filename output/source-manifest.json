@@ -1,43 +1,43 @@
 {
-  "updatedAt": "2026-09-05T08:32:20.195Z",
+  "updatedAt": "2026-09-05T18:32:47.411Z",
   "sources": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/09/0-20260905.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/09/0-20260906.txt",
       "outputFile": "source-1.txt",
       "status": "ok",
-      "extractedNodes": 290,
-      "uniqueNodes": 260
+      "extractedNodes": 292,
+      "uniqueNodes": 262
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/09/1-20260905.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/09/1-20260906.txt",
       "outputFile": "source-2.txt",
       "status": "ok",
-      "extractedNodes": 271,
-      "uniqueNodes": 271
+      "extractedNodes": 263,
+      "uniqueNodes": 263
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/09/2-20260905.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/09/2-20260906.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 4929,
-      "uniqueNodes": 4929
+      "extractedNodes": 3701,
+      "uniqueNodes": 3701
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/09/3-20260905.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/09/3-20260906.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
-      "extractedNodes": 30,
-      "uniqueNodes": 30
+      "extractedNodes": 24,
+      "uniqueNodes": 24
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/09/4-20260905.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/09/4-20260906.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
-      "extractedNodes": 1519,
-      "uniqueNodes": 1519
+      "extractedNodes": 1531,
+      "uniqueNodes": 1531
     },
     {
-      "url": "https://www.airportnode.com/stair/20260905-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20260906-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "Request failed with status code 404"
