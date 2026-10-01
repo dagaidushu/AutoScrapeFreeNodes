@@ -1,43 +1,43 @@
 {
-  "updatedAt": "2026-10-01T11:08:21.473Z",
+  "updatedAt": "2026-10-01T21:17:03.524Z",
   "sources": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/0-20261001.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/0-20261002.txt",
       "outputFile": "source-1.txt",
       "status": "ok",
-      "extractedNodes": 276,
-      "uniqueNodes": 274
+      "extractedNodes": 306,
+      "uniqueNodes": 305
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/1-20261001.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/1-20261002.txt",
       "outputFile": "source-2.txt",
       "status": "ok",
-      "extractedNodes": 283,
-      "uniqueNodes": 283
+      "extractedNodes": 100,
+      "uniqueNodes": 100
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/2-20261001.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/2-20261002.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 3561,
-      "uniqueNodes": 3561
+      "extractedNodes": 2983,
+      "uniqueNodes": 2983
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/3-20261001.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/3-20261002.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
-      "extractedNodes": 22,
-      "uniqueNodes": 22
+      "extractedNodes": 24,
+      "uniqueNodes": 24
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/4-20261001.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/4-20261002.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
-      "extractedNodes": 296,
-      "uniqueNodes": 296
+      "extractedNodes": 374,
+      "uniqueNodes": 374
     },
     {
-      "url": "https://www.airportnode.com/stair/20261001-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20261002-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "Request failed with status code 404"
