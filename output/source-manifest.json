@@ -1,43 +1,43 @@
 {
-  "updatedAt": "2026-10-15T09:21:09.111Z",
+  "updatedAt": "2026-10-15T20:00:06.821Z",
   "sources": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/0-20261015.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/0-20261016.txt",
       "outputFile": "source-1.txt",
       "status": "ok",
-      "extractedNodes": 327,
-      "uniqueNodes": 311
+      "extractedNodes": 341,
+      "uniqueNodes": 321
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/1-20261015.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/1-20261016.txt",
       "outputFile": "source-2.txt",
       "status": "ok",
-      "extractedNodes": 100,
-      "uniqueNodes": 99
+      "extractedNodes": 188,
+      "uniqueNodes": 188
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/2-20261015.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/2-20261016.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 472,
-      "uniqueNodes": 472
+      "extractedNodes": 283,
+      "uniqueNodes": 283
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/3-20261015.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/3-20261016.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
       "extractedNodes": 27,
       "uniqueNodes": 27
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/4-20261015.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/4-20261016.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
-      "extractedNodes": 613,
-      "uniqueNodes": 613
+      "extractedNodes": 635,
+      "uniqueNodes": 635
     },
     {
-      "url": "https://www.airportnode.com/stair/20261015-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20261016-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "Request failed with status code 404"
