@@ -1,43 +1,43 @@
 {
-  "updatedAt": "2026-10-17T08:45:40.157Z",
+  "updatedAt": "2026-10-17T18:46:35.303Z",
   "sources": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/0-20261017.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/0-20261018.txt",
       "outputFile": "source-1.txt",
       "status": "ok",
-      "extractedNodes": 354,
-      "uniqueNodes": 330
+      "extractedNodes": 366,
+      "uniqueNodes": 336
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/1-20261017.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/1-20261018.txt",
       "outputFile": "source-2.txt",
       "status": "ok",
-      "extractedNodes": 162,
-      "uniqueNodes": 162
+      "extractedNodes": 101,
+      "uniqueNodes": 101
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/2-20261017.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/2-20261018.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 1775,
-      "uniqueNodes": 1775
+      "extractedNodes": 1658,
+      "uniqueNodes": 1658
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/3-20261017.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/3-20261018.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
       "extractedNodes": 27,
       "uniqueNodes": 27
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/4-20261017.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/4-20261018.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
-      "extractedNodes": 648,
-      "uniqueNodes": 648
+      "extractedNodes": 636,
+      "uniqueNodes": 636
     },
     {
-      "url": "https://www.airportnode.com/stair/20261017-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20261018-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "Request failed with status code 404"
