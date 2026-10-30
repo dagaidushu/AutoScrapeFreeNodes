@@ -1,55 +1,55 @@
 {
-  "updatedAt": "2026-10-30T10:59:22.970Z",
+  "updatedAt": "2026-10-30T20:59:55.843Z",
   "sourceCount": 6,
   "sourceResults": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/0-20261030.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/0-20261031.txt",
       "outputFile": "source-1.txt",
       "status": "ok",
-      "extractedNodes": 469,
-      "uniqueNodes": 421
+      "extractedNodes": 476,
+      "uniqueNodes": 425
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/1-20261030.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/1-20261031.txt",
       "outputFile": "source-2.txt",
       "status": "ok",
-      "extractedNodes": 102,
-      "uniqueNodes": 102
+      "extractedNodes": 189,
+      "uniqueNodes": 189
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/2-20261030.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/2-20261031.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 1630,
-      "uniqueNodes": 1630
+      "extractedNodes": 1710,
+      "uniqueNodes": 1710
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/3-20261030.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/3-20261031.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
       "extractedNodes": 22,
       "uniqueNodes": 22
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/10/4-20261030.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/10/4-20261031.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
       "extractedNodes": 85,
       "uniqueNodes": 85
     },
     {
-      "url": "https://www.airportnode.com/stair/20261030-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20261031-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "fetch failed"
     }
   ],
   "counts": {
-    "extracted": 2308,
-    "exactUnique": 2260,
-    "semanticUnique": 2212,
-    "semanticDuplicatesRemoved": 48,
-    "reachableNodes": 2212,
+    "extracted": 2482,
+    "exactUnique": 2431,
+    "semanticUnique": 2378,
+    "semanticDuplicatesRemoved": 53,
+    "reachableNodes": 2378,
     "unreachableNodesRemoved": 0
   },
   "connectivityCheck": {
@@ -60,29 +60,29 @@
     "concurrency": 32
   },
   "protocolCounts": {
-    "vless": 1381,
-    "vmess": 94,
-    "trojan": 232,
-    "ss": 218,
+    "vless": 1440,
+    "vmess": 98,
+    "trojan": 310,
+    "ss": 232,
     "ssr": 0,
-    "hysteria": 1,
-    "hysteria2": 249,
+    "hysteria": 2,
+    "hysteria2": 266,
     "hy2": 0,
-    "tuic": 3,
-    "socks": 10,
+    "tuic": 0,
+    "socks": 11,
     "socks4": 0,
     "socks5": 0,
     "http": 0,
     "https": 0,
     "wireguard": 0,
     "wg": 0,
-    "anytls": 24,
+    "anytls": 19,
     "naive": 0,
     "shadowtls": 0
   },
   "failedSources": [
     {
-      "url": "https://www.airportnode.com/stair/20261030-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20261031-v2ray.txt",
       "error": "fetch failed"
     }
   ]
