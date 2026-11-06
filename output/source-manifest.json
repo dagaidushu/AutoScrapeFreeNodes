@@ -1,42 +1,43 @@
 {
-  "updatedAt": "2026-11-06T12:23:49.223Z",
+  "updatedAt": "2026-11-06T21:44:28.118Z",
   "sources": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/0-20261106.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/0-20261107.txt",
       "outputFile": "source-1.txt",
       "status": "ok",
-      "extractedNodes": 465,
-      "uniqueNodes": 459
+      "extractedNodes": 473,
+      "uniqueNodes": 467
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/1-20261106.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/1-20261107.txt",
       "outputFile": "source-2.txt",
-      "status": "failed",
-      "error": "Response contains no supported node URIs"
+      "status": "ok",
+      "extractedNodes": 112,
+      "uniqueNodes": 112
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/2-20261106.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/2-20261107.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 1428,
-      "uniqueNodes": 1428
+      "extractedNodes": 304,
+      "uniqueNodes": 304
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/3-20261106.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/3-20261107.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
       "extractedNodes": 20,
       "uniqueNodes": 20
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/4-20261106.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/4-20261107.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
-      "extractedNodes": 103,
-      "uniqueNodes": 103
+      "extractedNodes": 100,
+      "uniqueNodes": 100
     },
     {
-      "url": "https://www.airportnode.com/stair/20261106-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20261107-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "fetch failed"
