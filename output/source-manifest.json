@@ -1,43 +1,43 @@
 {
-  "updatedAt": "2026-11-13T12:32:32.222Z",
+  "updatedAt": "2026-11-13T22:06:13.406Z",
   "sources": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/0-20261113.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/0-20261114.txt",
       "outputFile": "source-1.txt",
       "status": "ok",
-      "extractedNodes": 519,
-      "uniqueNodes": 498
+      "extractedNodes": 526,
+      "uniqueNodes": 499
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/1-20261113.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/1-20261114.txt",
       "outputFile": "source-2.txt",
       "status": "ok",
-      "extractedNodes": 91,
-      "uniqueNodes": 91
+      "extractedNodes": 143,
+      "uniqueNodes": 121
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/2-20261113.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/2-20261114.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 1750,
-      "uniqueNodes": 1750
+      "extractedNodes": 1225,
+      "uniqueNodes": 1225
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/3-20261113.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/3-20261114.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
       "extractedNodes": 24,
       "uniqueNodes": 24
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/4-20261113.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/4-20261114.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
-      "extractedNodes": 114,
-      "uniqueNodes": 114
+      "extractedNodes": 1,
+      "uniqueNodes": 1
     },
     {
-      "url": "https://www.airportnode.com/stair/20261113-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20261114-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "fetch failed"
