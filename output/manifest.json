@@ -1,55 +1,54 @@
 {
-  "updatedAt": "2026-11-23T15:14:16.550Z",
+  "updatedAt": "2026-11-24T03:02:21.712Z",
   "sourceCount": 6,
   "sourceResults": [
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/0-20261123.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/0-20261124.txt",
       "outputFile": "source-1.txt",
       "status": "ok",
-      "extractedNodes": 203,
-      "uniqueNodes": 165
+      "extractedNodes": 205,
+      "uniqueNodes": 167
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/1-20261123.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/1-20261124.txt",
       "outputFile": "source-2.txt",
-      "status": "ok",
-      "extractedNodes": 143,
-      "uniqueNodes": 131
+      "status": "failed",
+      "error": "Request timed out after 20000ms"
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/2-20261123.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/2-20261124.txt",
       "outputFile": "source-3.txt",
       "status": "ok",
-      "extractedNodes": 448,
-      "uniqueNodes": 448
+      "extractedNodes": 1417,
+      "uniqueNodes": 1417
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/3-20261123.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/3-20261124.txt",
       "outputFile": "source-4.txt",
       "status": "ok",
       "extractedNodes": 22,
       "uniqueNodes": 22
     },
     {
-      "url": "https://node.freeclashnode.com/uploads/2026/11/4-20261123.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/4-20261124.txt",
       "outputFile": "source-5.txt",
       "status": "ok",
       "extractedNodes": 1,
       "uniqueNodes": 1
     },
     {
-      "url": "https://www.airportnode.com/stair/20261123-v2ray.txt",
+      "url": "https://www.airportnode.com/stair/20261124-v2ray.txt",
       "outputFile": "source-6.txt",
       "status": "failed",
       "error": "fetch failed"
     }
   ],
   "counts": {
-    "extracted": 817,
-    "exactUnique": 767,
-    "semanticUnique": 725,
-    "semanticDuplicatesRemoved": 42,
-    "reachableNodes": 725,
+    "extracted": 1645,
+    "exactUnique": 1607,
+    "semanticUnique": 1582,
+    "semanticDuplicatesRemoved": 25,
+    "reachableNodes": 1582,
     "unreachableNodesRemoved": 0
   },
   "connectivityCheck": {
@@ -60,29 +59,33 @@
     "concurrency": 32
   },
   "protocolCounts": {
-    "vless": 409,
-    "vmess": 55,
-    "trojan": 66,
-    "ss": 154,
+    "vless": 706,
+    "vmess": 125,
+    "trojan": 99,
+    "ss": 369,
     "ssr": 0,
-    "hysteria": 0,
-    "hysteria2": 27,
+    "hysteria": 12,
+    "hysteria2": 207,
     "hy2": 0,
     "tuic": 0,
-    "socks": 12,
+    "socks": 58,
     "socks4": 0,
     "socks5": 0,
     "http": 0,
     "https": 0,
-    "wireguard": 2,
+    "wireguard": 0,
     "wg": 0,
-    "anytls": 0,
+    "anytls": 6,
     "naive": 0,
     "shadowtls": 0
   },
   "failedSources": [
     {
-      "url": "https://www.airportnode.com/stair/20261123-v2ray.txt",
+      "url": "https://node.freeclashnode.com/uploads/2026/11/1-20261124.txt",
+      "error": "Request timed out after 20000ms"
+    },
+    {
+      "url": "https://www.airportnode.com/stair/20261124-v2ray.txt",
       "error": "fetch failed"
     }
   ]
